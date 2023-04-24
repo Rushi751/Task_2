@@ -1,0 +1,135 @@
+    write a blog on difference between document and window objects?
+
+Ans=> Document=>
+      The document object represent a web page that is loaded in the browser.
+      By accessing the document object, we can access the element in the HTML page.
+	  With the help of document objects, we can add dynamic content to our web page
+      The document object can be accessed with a window.document or just document.
+	  
+	  Syntax :
+	          document.propertyName
+			  
+			  for ex:
+			     document.head
+				 document.title
+				 
+	 Properties:
+	   activeElements,body,anchors,baseURl,cookie,charset,defaultView,etc.
+	   
+	   
+	 Methods:
+	 document.MethodName()
+	 
+	 Window=>
+	   Top most object of DOM hierarchy.
+	   The window object is the topmost object of the DOM hierarchy.
+	   It represents a browser window or frame that displays the contents of the webpage.
+	   Whenever a window appears on the screen to display the contents of the document,
+	    the window object is created. 
+		
+		Syntax: 
+		        window.propertyName;
+				
+		Properties:
+		   Closed,console,defaultStatus,crypto,frames[],etc.
+		   
+		 Methods=>
+		    window.MethodName()
+			
+			
+2.codekata practice=>
+
+  Mathematics::
+   1.Given 3 numbers N , L and R. Print 'yes' if N is between L and R else print 'no'.
+Sample Testcase :
+INPUT
+3
+2 6
+OUTPUT
+yes
+
+ logic(code)=>
+    var N =parseInt(userInput[0]);
+  var M=userInput[1].split(" ");
+  var z=[];
+  for(var i=0;i<M.length;i++){
+      
+    // console.log(parseInt(M[i]))
+     z.push(parseInt(M[i]));
+  }
+  var L=z[0];
+  var R=z[1];
+  
+  
+  if(L<N && N<R){
+     console.log("yes")
+  
+  }
+  else{
+      console.log("no")
+  
+  }
+  
+  
+ 2.Count the number of digits of a given number N.Size of the integer ranges from 1Sample Testcases :
+INPUT
+548
+OUTPUT
+3
+
+Logic(Code)=>
+
+ var N=userInput;
+ var K=0;
+ var Ans=0;
+ while(N>0){
+     
+     Ans+=1;
+     N=Math.floor(N/10);
+     //console.log(N)
+ }
+ 
+ console.log(Ans)
+ 
+ 3.Write a program to print the sum of the first K natural numbers.
+Input Size : n <= 100000
+Sample Testcase :
+INPUT
+3
+OUTPUT
+6
+ 
+ Logic(Code)=>
+   var a=parseInt(userInput[0]);
+ // console.log(a)
+  var sum=0;
+  
+  for(var i=1;i<=a;i++){
+      sum=sum+i;
+  }
+  console.log(sum)
+  
+  
+ 4.Given a number N, print 'yes' if it is composite else print 'no'.
+Sample Testcase :
+INPUT
+123
+OUTPUT
+yes
+ 
+ 
+ logic(code)=>var a=parseInt(userInput[0]);
+
+ 
+ var factor=0;
+ for(var i=1;i<=(a/2);i++){
+     if(a%i==0){
+         factor=factor+1;
+     }
+     
+ }
+ if(factor>=3){
+      console.log("yes")
+ }else{
+      console.log("no")
+ }
